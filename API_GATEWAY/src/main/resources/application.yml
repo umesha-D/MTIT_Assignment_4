@@ -1,0 +1,26 @@
+server:
+  port: 9772
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: PRODUCT-SERVICE
+          uri: http://localhost:5002
+          predicates: Path=/api/products/**
+        - id: BUYER-SERVICE
+          uri: http://localhost:5005
+          predicates:
+            - Path=/api/buyers/**,/api/buyerauth/**
+        - id: CART-SERVICE
+          uri: http://localhost:9003
+          predicates: Path=/api/cart/**
+        - id: ORDER-SERVICE
+          uri: http://localhost:5003
+          predicates: Path=/api/orders/**
+        - id: SELLER-SERVICE
+          uri: http://localhost:5004
+          predicates:
+            - Path=/api/sellers/**,/api/sellerauth/**

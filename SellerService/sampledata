@@ -1,0 +1,12 @@
+{
+    "username": "jonTraffy",
+    "password": "jon123",
+    "email": "jontraf@gmail.com",
+    "mobileNo": "0798812527",
+    "address": {
+        "houseNumber": "45G",
+        "streetName": "Abc",
+        "city": "Ddddeg"
+    },
+    "profilePic": "sdfa5fasdf"
+}
